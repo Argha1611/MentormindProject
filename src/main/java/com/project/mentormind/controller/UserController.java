@@ -26,7 +26,7 @@ public class UserController {
         model.addAttribute("user", new User());
         Test test = new Test(Arrays.asList("Blood Test", "Eye Test", "Hearing Test", "ECG", "USG", "CT Scan", "Biopsy", "Gastroscopy", "X Rays", "MRI Scan"));
         model.addAttribute("tests", test.getTests());
-        return "index";
+        return "userForm";
     }
     @PostMapping("/save")
     public String saveUser(User user, @RequestParam("file") MultipartFile file) throws IOException {
